@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>how it works</title>
+	<style type="text/css">
+		
+		#main_div{margin-left: 20px;
+			margin-right:5px;
+			font-size:17px; }
+
+
+		#img1{float: right;}
+
+              #p1{padding-right: 10px;
+              }
+              #img6{float: right;}
+              
+
+	</style>
+</head>
+<body><div id="main_div">
+	<div id="mydiv1">
+	<h2>OVERVIEW</h2>
+	<div id="img1">
+		
+	<img src="{{url_for('static',filename='images/gs1.jpg')}}">
+		
+
+</div>
+		<p id="p1">
+			In the field of astronomy, the classification and analysis of celestial objects and phenomena captured in images play a pivotal role in advancing our understanding of the universe. With the ever-increasing volume of astronomical data being generated, the need for efficient and accurate automated classification methods has become paramount. This paper presents a novel approach to address this challenge by harnessing the power of Convolutional Neural Networks (CNNs) for the automated classification of astronomical images.Convolutional Neural Networks have demonstrated remarkable capabilities in image recognition tasks across various domains, making them an ideal candidate for handling the complexity and diversity of astronomical imagery. Leveraging their ability to automatically extract hierarchical features, our proposed framework aims to classify celestial objects, such as galaxies, stars, and nebulae, with unprecedented accuracy and speed.
+			<br><br>
+
+    		The methodology involves training a deep CNN architecture on acurated dataset of labeled astronomical images. By iteratively learning and refining intricate features from the data, the network becomes adept at discriminating between different classes of celestial objects. Once trained, the CNN can then accurately classify unseen images, enabling the rapid analysis of vast datasets that would be otherwise daunting for human astronomers to process manually.The implications of this automated classification system are profound. It not only enables astronomers to accelerate their research by swiftly categorizing and cataloging vast volumes of data, but also paves the way for the discovery of new celestial phenomena that may have previously eluded detection. Furthermore, the approach has the potential to revolutionize the way we explore and comprehend the universe, offering new insights into its intricate structures and dynamics.
+
+		</p1>
+	</div>
+
+<br>
+       <div id="01">
+       	<h2>Aim</h2>
+
+       	<p2>The  data classification is primarily focused on galaxies, it means that the machine learning or data analysis tasks are centered around organizing, categorizing, or identifying different types of galaxies within a given dataset. Galaxies are vast systems of stars, gas, dust, and dark matter held together by gravity, and they come in various shapes, sizes, and structures.
+       	In the context of astrophysics and astronomy, data classification related to galaxies might involve tasks such as:<mark><b>Galaxy Morphology Classification: Identifying and categorizing galaxies based on their visual appearance, such as spiral, elliptical, or irregular galaxies.</b></mark>
+       </p2>
+       	<br></div>
+       	<div id="02">
+
+       	<h2>CNN</h2>
+         <p3>A Convolutional Neural Network (CNN) is a type of deep neural network architecture specifically designed for processing and analyzing visual data, such as images. CNNs have become the backbone of many computer vision applications due to their ability to automatically learn hierarchical representations of features directly from the data. Here are key aspects of CNNs:
+         	Convolutional Layers: CNNs use convolutional layers to apply convolutional operations to the input data. These operations involve filters or kernels that slide over the input, enabling the network to learn local patterns and features. Convolutional layers are crucial for capturing spatial hierarchies in the data.
+			
+			Pooling Layers: Pooling layers are used to downsample the spatial dimensions of the input. Max pooling, for example, retains the most significant information from a set of values, reducing the computational load and making the network more robust to variations in input.
+
+			Fully Connected Layers: After extracting features through convolutional and pooling layers, fully connected layers are employed for making final predictions. These layers connect every neuron to every neuron in the previous and subsequent layers.
+
+			Activation Functions: Common activation functions, such as Rectified Linear Unit (ReLU), introduce non-linearity to the model, enabling it to learn complex relationships within the data.
+
+			Shared Weights: CNNs often use shared weights, which allows the same filters to be applied across different spatial locations in the input. This helps capture translation-invariant features, making CNNs effective for tasks where the arrangement of features is crucial.
+
+		CNNs are particularly effective in image classification tasks, where they can automatically learn and identify patterns, edges, and textures within images. Beyond image classification, CNNs have been successfully applied to various computer vision tasks, including object detection, image segmentation, and facial recognition. Their architecture is inspired by the visual processing mechanisms in the human brain, making them well-suited for tasks involving spatial hierarchies and local patterns in data.
+	</p3>
+	<h2>Lenet5</h2>
+	<p4>LeNet-5 is a convolutional neural network (CNN) architecture that was<mark> introduced by Yann LeCun and his collaborators in 1998.</mark> It was primarily designed for handwritten digit recognition, specifically for recognizing characters in checks and postal codes. LeNet-5 was a pioneering model in the field of deep learning and played a significant role in demonstrating the effectiveness of convolutional neural networks.
+
+	Key characteristics of LeNet-5 include:<ul>
+	<li>Layer Architecture: LeNet-5 consists of seven layers, including three convolutional layers, two subsampling (pooling) layers, and two fully connected layers.</li>
+
+	<li>Input Size: The network takes as input grayscale images of size 32x32 pixels.</li>
+
+	<li>Convolutional Layers: The first convolutional layer uses six filters of size 5x5, followed by a subsampling layer. The second convolutional layer uses 16 filters of size 5x5.</li>
+
+	<li>Subsampling (Pooling) Layers: These layers perform spatial down-sampling, reducing the dimensionality of the data and making the network more computationally efficient.</li>
+
+	<li>Fully Connected Layers: The final layers of the network are fully connected, leading to the output layer. The fully connected layers capture higher-level features and make predictions based on the learned representations.</li>
+
+	<li>Activation Functions: LeNet-5 uses the sigmoid activation function in the fully connected layers and hyperbolic tangent (tanh) activation in the convolutional and subsampling layers.</li>
+
+	<li>Softmax Output: The output layer typically uses the softmax activation function, providing probabilities for each class in a multi-class classification task.</li></ul>
+
+LeNet-5 demonstrated the importance of using convolutional layers with shared weights and pooling layers, which are now common components in many modern CNN architectures. While the model was designed for digit recognition, its principles laid the foundation for subsequent developments in deep learning and convolutional neural networks. LeNet-5 remains an essential landmark in the history of neural network architectures, particularly in the context of image classification.
+</p4>
+<div id="mydiv5">
+<h2>DataSet</h2>
+<div id="img2">
+	<a href="https://astronn.readthedocs.io/en/latest/galaxy10.html">
+<img src="{{url_for('static',filename='images/galaxy10.png')}}">
+</a>
+
+</div>
+<p5>Galaxy10 SDSS is a dataset contains 21785 69x69 pixels colored galaxy images (g, r and i band) separated in 10 classes. Galaxy10 SDSS images come from Sloan Digital Sky Survey and labels come from Galaxy Zoo.
+
+Galaxy10 dataset (21785 images)<ul><li>
+
+Class 0 (3461 images): Disk, Face-on, No Spiral</li><li>
+ Class 1 (6997 images): Smooth, Completely round</li><li>
+ Class 2 (6292 images): Smooth, in-between round</li><li>
+ Class 3 (394 images): Smooth, Cigar shaped</li><li>
+ Class 4 (1534 images): Disk, Edge-on, Rounded Bulge</li><li>
+ Class 5 (17 images): Disk, Edge-on, Boxy Bulge</li><li>
+ Class 6 (589 images): Disk, Edge-on, No Bulge</li><li>
+ Class 7 (1121 images): Disk, Face-on, Tight Spiral</li><li>
+ Class 8 (906 images): Disk, Face-on, Medium Spiral</li><li>
+ Class 9 (519 images): Disk, Face-on, Loose Spiral
+</li>
+</ul>
+These classes are mutually exclusive, but Galaxy Zoo relies on human volunteers to classify galaxy images and the volunteers do not agree on all images. For this reason, Galaxy10 only contains images for which more than 55% of the votes agree on the class. That is, more than 55% of the votes among 10 classes are for a single class for that particular image. If none of the classes get more than 55%, the image will not be included in Galaxy10 as no agreement was reached. As a result, 21785 images after the cut.
+
+The justification of 55% as the threshold is based on validation. Galaxy10 is meant to be an alternative to MNIST or Cifar10 as a deep learning toy dataset for astronomers. Thus astroNN.models.Cifar10_CNN is used with Cifar10 as a reference. The validation was done on the same astroNN.models.Cifar10_CNN. 50% threshold will result a poor neural network classification accuracy although around 36000 images in the dataset, many are probably misclassified and neural network has a difficult time to learn. 60% threshold result is similar to 55% , both classification accuracy is similar to Cifar10 dataset on the same network, but 55% threshold will have more images be included in the dataset. Thus 55% was chosen as the threshold to cut data.
+
+The original images are 424x424, but were cropped to 207x207 centered at the images and then downscaled 3 times via bilinear interpolation to 69x69 in order to make them manageable on most computer and graphics card memory.
+
+There is no guarantee on the accuracy of the labels. Moreover, Galaxy10 is not a balanced dataset and it should only be used for educational or experimental purpose. If you use Galaxy10 for research purpose, please cite Galaxy Zoo and Sloan Digital Sky Survey.
+</p5>
+<div>
+	<h2>IDE's</h2>
+	<ul><li><a href="https://www.jetbrains.com/pycharm/"target="blank">PyCharm</a></li>
+		<li> <a href="https://jupyter.org/" target="blank">Jupyter Notebook</a> 
+		  </li>
+	</ul>
+</div>
+</div>
+<h2>Libraries Used</h2>
+<p><ul><li><b><a href="https://www.tensorflow.org/"target="blank"> TensorFlow <img src="static/images/tensor.png" height="25px",width="25px" >: </b></a>  <br>
+
+ TensorFlow is an open-source machine learning framework developed by Google. It is widely used for building and training deep learning models. TensorFlow provides a comprehensive set of tools and libraries for numerical computation, machine learning, and neural networks.<br>
+Use Cases: Deep learning, machine learning, neural networks.
+</li>
+	<li><b><a href="https://astronn.readthedocs.io/"target="blank">  AstroNN  <img src="static/images/astronn.png" height="25px",width="25px">:</b> </a> <br>
+
+ AstroNN is a Python library specifically designed for astronomy-related tasks. It provides tools for handling astronomical data and implementing machine learning algorithms for tasks such as stellar parameter estimation.<br>
+Use Cases: Stellar parameter estimation, astronomy data analysis.</li>
+<li>
+	<b><a href="https://pandas.pydata.org/"target="blank">       Pandas <img src="static/Images/pandas.png" height="30px",width="30px" ></a>:</b><br>
+	Pandas is a powerful data manipulation library for Python. It provides data structures like DataFrames, which are highly efficient for handling and analyzing structured data.<br>
+    Use Cases: Data cleaning, manipulation, analysis, and exploration.</li>
+ <li>
+ 	<b><a href="https://keras.io/"target="blank">    Keras <img src="static/images/keras.png" height="25px",width="25px">:</b></a><br>
+	 Keras is a high-level neural networks API written in Python. It is designed for easy and fast experimentation with deep learning models. Keras can run on top of TensorFlow, Theano, or Microsoft Cognitive Toolkit (CNTK).<br>
+    Use Cases: Neural network development, deep learning.
+ </li><li>
+ 	<b><a href="https://scikit-learn.org/"target="blank">  scikit-learn (sklearn)<img src="static/images/sklearn.png" height="25px",width="25px">:</a> </b><br>
+
+	Scikit-learn is a machine learning library for Python that provides simple and efficient tools for data analysis and modeling. It includes various algorithms for classification, regression, clustering, and more.<br>
+	Use Cases: Machine learning, data preprocessing, model evaluation.
+	<li>
+		<b><a href="https://seaborn.pydata.org/"target="blank">   seaborn <img src="static/images/seaborn.png" height="27px",width="27px"> :</a> </b><br>
+		Seaborn is a Python data visualization library that builds on Matplotlib, providing an intuitive and high-level interface for creating visually appealing statistical plots. With built-in themes and color palettes, Seaborn simplifies the process of generating various types of plots, including bar plots, violin plots, and more. It excels in visualizing complex relationships in datasets and simplifies the representation of regression models, distribution plots, and categorical data.
+</li>
+ </li>
+</li><li>
+	<b><a href="https://matplotlib.org/"target="blank"> Mathplotlib<img src="static/images/mathplotlib.png" height="25px", width="25px"> :</a> </b><br>
+
+	Matplotlib is a Python library for creating static, animated, and interactive visualizations. It offers a versatile set of tools for generating various types of plots, such as line charts, scatter plots, and histograms. Matplotlib is widely used in data analysis, scientific computing, and machine learning due to its flexibility, customization options, and integration with the Python ecosystem.
+</li>
+<li>
+	<b> <a href="https://numpy.org/"target="blank">Numpy  <img src="static/images/numpy.png" height="25px", width="25px">: </a>  </b><br>
+	NumPy is a Python library for numerical computing, providing support for large, multi-dimensional arrays and matrices. It offers a collection of mathematical functions for efficient operations on these arrays. NumPy is widely used in scientific computing, data analysis, and machine learning due to its powerful array operations and mathematical capabilities.
+</li>
+</ul>
+</p5><div id="mydiv6">
+<h2><b>Flask</b></h2><br>
+<div id="img6">
+<a href="https://flask.palletsprojects.com/" target="blank">
+<img src="static/images/flask1.png">
+</a>
+</div>
+<p id="p6">Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for object-relational mappers, form validation, upload handling, various open authentication technologies and several common framework related tools.
+ </p6><br><br>
+
+
+ 	<br>
+ 	<h2><b>How the model works</b></h2>
+ 	<p7> Creating a model using the LeNet-5 architecture in a Convolutional Neural Network (CNN) with the Galaxy Zoo dataset involves several key steps. First, prepare the dataset by downloading and preprocessing the Galaxy Zoo dataset, which typically includes features like galaxy images and corresponding labels indicating classes or attributes. Implement the LeNet-5 architecture for the CNN model, adjusting input dimensions based on the size of galaxy images and output dimensions according to the classification task's requirements.
+
+Next, split the dataset into training and testing sets, ensuring a representative distribution of classes in both subsets. Trains the LeNet-5 model using the training set, employing appropriate loss functions, optimizers, and metrics for the specific classification task. Evaluate the trained model on the testing set,then monitoring metrics such as accuracy, precision, recall, and F1-score to assess its performance.
+
+after that Generates a confusion matrix to gain detailed insights into the model's classification performance, providing a breakdown of correct and incorrect predictions for each class. Moving on to deployment, create a Flask web application to deploy the model. Define routes for uploading images, making predictions, and displaying results. Develop a simple web interface using HTML and CSS, incorporating a form for image uploads and a section to display model predictions.
+
+Integrate the Flask backend with the trained LeNet-5 model, enabling users to interact with the deployed model through the web interface. Choose a deployment platform, such as cloud services like Heroku, AWS, or platforms like Docker, to host the Flask web application. Test the deployed web application to ensure seamless functionality, including image uploads, predictions, and result display.
+</p7>
+       </div>
+       </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>questions</title>
+        <style>
+            .container{
+                background-color:#252525;
+                color:white;
+                width:50%;
+                height:50vh;
+                margin-left: 25%;
+            }
+            .btn{ 
+                width:150px;
+                height:45px;
+                margin-top:20px;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p id="questions">hii</p>
+            <button class="btn"  id="btn" type="button">Next Question</button>
+        </div>
+        <script>
+           
+          function fibonacci(limit) {
+    let fib = [0, 1];
+    while (fib[fib.length - 1] + fib[fib.length - 2] <= limit) {
+        fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+    }
+    return fib;
+}
+
+function displayFibonacciNumbers(limit) {
+    const fibonacciNumbers = fibonacci(limit);
+    const resultElement = document.getElementById("fibonacciNumbers");
+    resultElement.innerHTML = "Fibonacci numbers up to " + limit + ": " + fibonacciNumbers.join(", ");
+}
+
+// Example usage
+const limit = 100;
+displayFibonacciNumbers(limit);
+
+        </script>
+    </body>
+</html>
